@@ -1,0 +1,93 @@
+.nav-item{
+	font-size: 25px;
+	padding-left: 120px;
+	padding-right: 70px;
+	padding-top: 17px;
+	list-style: none !important;
+}
+
+nav .navbar-nav li a{
+  color: #003566 !important;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.5s ease-out;
+  text-decoration: none;
+  }
+
+nav .navbar-nav li a:hover {
+ color: #003566 !important;
+ border-bottom-color: #003566;
+}
+
+h1.text-center{
+	padding-top: 200px;
+	font-family:'Dancing script';
+	color:#003566;
+	margin-left: 600px;
+}
+
+h1{
+	font-family:'shadows into light';
+	font-size: 50px;
+	color:  #99b3e6;
+}
+
+.big-banner{
+height: 500px;
+background-image: url(https://cdn.hipwallpaper.com/i/77/40/1MRIyb.jpg);
+background-size: cover !important;
+color:#003566;
+}
+
+.big-banner2{
+    height: 500px;
+background-image: url(https://unicornholiday.com/wp-content/uploads/2019/07/thailand.jpg);
+background-size: cover !important;
+color:#003566;
+}
+
+.big-banner3{
+    height: 500px;
+background-image: url(https://www.journalofnomads.com/wp-content/uploads/2019/10/Mosque-in-Casablanca-Morocco.jpg);
+background-size: cover !important;
+color:#003566;
+}
+
+.big-banner4{
+    height: 500px;
+background-image: url(https://s.marketwatch.com/public/resources/images/MW-HQ781_Japan__ZH_20190905153401.jpg);
+background-size: cover !important;
+color:#003566;
+}
+
+.idk{
+	background-color: #99b3e6;
+	font-family: 'shadows into light';
+	width: 300px;
+	height: 250px;
+	transition-duration: 2000ms;
+	transition-property: background, transform;
+	margin-left: 50px;
+
+}
+
+.idk:hover{
+background-color: #d6e0f5;
+transform: rotate(360deg);
+}
+
+.middle{
+	background-color: #25488e;
+	font-family: 'shadows into light';
+	font-size: 30px;
+
+}
+
+p{
+	font-family: 'shadows into light';
+}
+
+footer {
+    background-color: #e6e6e6;
+    font-size: 13px;
+    font-weight: bold;
+}

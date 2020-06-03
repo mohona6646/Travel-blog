@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <br>
+    <br>
+    {% for message in get_flashed_messages() %}
+    {{ message }}
+    {% endfor %}
+    <br/>
+    <br>
+    <div class="container">
+        <h1> Reader's review</h1>
+        <form id="form01" action="/review" method="post"><br>
+            <label>Username:<input type="text" name="username"/></label><br/><br>
+            <label>Password: <input type="password" name="pwd"></label><br/><br>
+            <label>Age: <input type="number" name="age" min="1" max="125"/></label><br/><br>
+            <label>What country would you like to rate?:<br>
+                <label><input type="radio" name="radio_group" value="r1"/>Thailand</label>
+                <label><input type="radio" name="radio_group" value="r2"/>Morocco</label>
+                <label><input type="radio" name="radio_group" value="r3"/>Japan</label>
+            </label><br/>
+            <label>What were your favourite sections to read of the country?:<br>
+                <label><input type="checkbox" name="checkbox_group" value="c1"/>History</label>
+                <label><input type="checkbox" name="checkbox_group" value="c2"/>Culture</label>
+                <label><input type="checkbox" name="checkbox_group" value="c3"/>Food</label>
+
+            </label><br/>
+            <label>What would be the overall rating for the page?:<br> <select name="select1">
+                <option value="o1">1</option>
+                <option value="o2">2</option>
+                <option value="o3">3</option>
+                <option value="o3">4</option>
+                <option value="o3">5</option>
+                <option value="o3">6</option>
+                <option value="o3">7</option>
+                <option value="o3">8</option>
+                <option value="o3">9</option>
+                <option value="o3">10</option>
+            </select></label><br/><br>
+            {{form.submit()}}
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endblock %}

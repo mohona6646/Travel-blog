@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mohona's travel blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Loved+by+the+King|Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="templates\functions.js"> </script>
+    <style>
+
+nav .navbar-nav li a{
+  color: #003566 !important;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.5s ease-out;
+  text-decoration: none;
+    font-family: 'Shadows into light';
+  }
+
+nav .navbar-nav li a:hover {
+ color: #003566 !important;
+ border-bottom-color: #003566;
+}
+nav .navbar-brand{
+    color: #003566 !important;
+    font-family: 'Shadows into light';
+}
+h1.text-center{
+	padding-top: 0px;
+	font-family:'Dancing script';
+    font-size: 470px;
+	color:#ffffe6 ;
+	margin-left: 30px;
+}
+
+
+
+h1{
+	font-family:'shadows into light';
+	font-size: 50px;
+	color:  #99b3e6;
+}
+
+
+h2.text-center{
+    font-family:'shadows into light';
+	font-size: 50px;
+	color:  #99b3e6;
+}
+.big-banner{
+height: 500px;
+background-image: url(https://mythsandmountains.com/wp-content/uploads/2018/09/myths-and-mountains-intro-slide3-1.jpg);
+background-size: cover !important;
+}
+
+.big-banner2{
+    height: 600px;
+background-image: url(https://www.mawista.com/wp-content/uploads/2014/04/tipps-und-informationen-fuer-ein-auslandssemester-in-thailand.jpg);
+background-size: cover !important;
+}
+
+.big-banner3{
+    height: 600px;
+background-image: url(https://expertvagabond.com/wp-content/uploads/chefchaouen-side-streets-XL.jpg);
+background-size: cover !important;
+}
+
+.big-banner4{
+    height: 600px;
+background-image: url(https://s.marketwatch.com/public/resources/images/MW-HQ781_Japan__ZH_20190905153401.jpg);
+background-size: cover !important;
+}
+
+.idk{
+	background-color: #99b3e6;
+	font-family: 'shadows into light';
+	width: 300px;
+	height: 350px;
+	transition-duration: 2000ms;
+	transition-property: background, transform;
+	margin-left: 50px;
+
+}
+
+.idk:hover{
+background-color: #d6e0f5;
+transform: rotate(360deg);
+}
+
+.middle{
+	background-color: #25488e;
+	font-family: 'shadows into light';
+	font-size: 30px;
+
+}
+
+p{
+	font-family: 'shadows into light';
+}
+
+footer {
+    background-color: #e6e6e6;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="/">Mohoha Mazumdar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item {% block activeHome %}{% endblock %}">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+
+      <li class="nav-item dropdown {% block activePortfolio %}{% endblock %}">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Countries</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item {% block activeThailand %}{% endblock %}" href="/Thailand/">Thailand</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item {% block activeMorocco %}{% endblock %}" href="/Morocco/">Morocco</a>
+          <a class="dropdown-item {% block activeJapan %}{% endblock %}" href="/Japan/">Japan</a>
+        </div>
+      </li>
+
+     <li class="nav-item {% block activeTravel %}{% endblock %}">
+        <a class="nav-link" href="/Travel/">Travel tips</a>
+      </li>
+      <li class="nav-item {% block activeContacts %}{% endblock %}">
+        <a class="nav-link" href="/Contacts/">Contacts</a>
+      </li>
+    <li class="nav-item {% block activeReview %}{% endblock %}">
+        <a class="nav-link" href="/review">Review</a>
+      </li>
+    <li class="nav-item">
+                {% if current_user.is_authenticated %}
+                <a class="nav-link" href="/logout" onmouseover="">Logout</a>
+                {% else %}
+                <a  class="nav-link" href="/signIn" onmouseover="">Sign-in</a>
+            {% endif %}
+    </li>
+    </ul>
+    <form class=" form-inline my-2 my-lg-0 " style="font-family: 'Shadows into light'">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" value="" id="searchbar" onkeyup="searchFunction()">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+  <br>
+  <br>
+
+    {% block content %}
+
+    <div class="jombotron">
+   <div class="big-banner img-responsive" >
+       <div class="row align-items-center">
+           <div class="col-lg-12"><h1 class="text-center" style="font-size: 50px; padding: 200px; margin-left: 600px;">"Traveling,
+               It leaves you speechless and then turns you into a storyteller."</h1></div>
+       </div>
+  </div>
+        </div>
+
+   <br>
+    <br>
+    <div class="container">
+        <div class="Jumbotron text-center">
+             <h1>Hi there, I'm Mohona</h1>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" id='list'>
+         <div class="col-lg-4"> <p class="idk">Hey there, my name is Mohona and as you can see from this website,
+         I LOVE traveling. It is definitely one of my passions. I love learning about different cultures and get a taste of what it is like to be living
+         there. I believe there is beauty in everything and traveling has taught me to have a greater appreciation of what Mother Nature has to offer
+         to us. I hope this blog will grow your interest for traveling and will prepare you for your next destination, to wherever it is.
+         Feel free to add pictures you have of the countries mentioned in this blog. This way, people can benefit from your tips and ideas too!</p>
+         </div>
+         <div class="col-lg-3"> <img src="{{ url_for('static', filename='mypicture.jpg')}}" alt="my picture" class="img-fluid rounded-circle" width="250" height="auto" margin-left=30px>
+         </div>
+         <div class="col-lg-1"> <img src="{{ url_for('static', filename='world.png') }}" alt="world" class="img-fluid" width="150" height="auto">
+         </div>
+
+        <div class="col-lg-1"><p class="idk"> Before we jump right into the fun part, I would like to introduce myself. So far, you know
+        my name and my love for travelling. I am 20 years old and live in Montreal, Cananda. I am currently studying at Concordia University in the program of Software engineering.
+        I started travelling at a very young age with my family. I had this opportunity to experience the exhilaration one goes through when boarding a plane
+        and wondering what the place will look like throughout the entire duration of the flight at the very age of 5. My very first journey was to Italy. The only
+        thing I retained from my visit is the hazelnut gelato. Ever since, my love for traveling keeps growing!</p>
+        </div>
+    </div>
+
+     <br>
+     <br>
+
+    <div class="middle">
+        <div class="row align-items-center">
+            <div class="col-lg-12"> <p class="text-light text-center">Here are some of the pictures I have taken during my stay in these beautiful places</p>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+        <div class="row " id='list'>
+             <div class="col-lg-3"><img src="{{ url_for('static', filename='thailand.jpg') }}" alt="Thailand" class="img-fluid img-thumbnail" width="250" height="auto" margin-left=30px></div>
+             <div class="col-lg-3"><img src="{{ url_for('static', filename='japanesestreet.jpg') }}" alt="Japanese street" class="img-fluid img-thumbnail" width="400" height="auto" margin-left=30px></div>
+             <div class="col-lg-1"><img src="{{ url_for('static', filename='tokyo.jpg') }}" alt="Tokyo" class="img-fluid img-thumbnail" width="900" height="auto" margin-left=30px></div>
+            <div class="col-lg-2"><p class="idk">These are pictures are only a few of the amazing ones I have taken during my journey. Looking back at these
+                        pictures gives me great happiness. To the far left you have a picture of the sun setting on the street market of
+                        Bangkok, Thailand. The picture right next to it offers a glimpse of the street food in Japan. The small black and white
+                        picture is a street in Japan. In the second row, far left, we have a view of the streets in Casablanca, Morocco. And lastly,
+                        but surely not the least is a picture of Phucket,Thailand. </p>
+            </div>
+        </div>
+    </div>
+
+     <div class="row ">
+          <div class="col-lg-4"><img src="{{ url_for('static', filename='morocco.jpg') }}"alt="Morocco" class="img-fluid img-thumbnail" width="400" height="auto" margin-left=30px></div>
+          <div class="col-lg-2"><img src="{{ url_for('static', filename='phucket.jpg') }}"alt="Phucket" class="img-fluid img-thumbnail" width="900" height="auto" margin-left=30px></div>
+     </div>
+
+      <br>
+      <br>
+
+        <div class="container" id='list'>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <p>
+                        Now that you know a little about me and that we both know we share the same passion for traveling, we can jump into
+                        the most awaited part of this blog, where we share our favourite moments and inspire others to do so! I hope this blog helps
+                        you guys to get started on your own journey and find the peace along the way.
+                        And remember, jobs fill your pocket. Adventures fill your soul.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+    {% endblock %}
+
+   <br>
+   <br>
+      <footer>
+          <div class="row">
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+                  <p>Copyright © 2020</p>
+              </div>
+              <div class="col-md-4">
+                  <a href="#" class="navbar-brand"><img src="{{ url_for('static', filename='logo2.png') }}" alt="logo" width="250" height="auto"></a>
+              </div>
+          </div>
+      </footer>
+
+</body>
+</html>

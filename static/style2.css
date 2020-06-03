@@ -1,0 +1,88 @@
+
+.navbar{
+	background-color: #c4c4c4 !important;
+	margin-right: 0;
+	font-family: 'Shadows into light' !important;
+}
+
+
+.navbar-brand {
+	height:auto;
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+
+.nav-item{
+	font-size: 25px;
+	padding-left: 120px;
+	padding-right: 70px;
+	padding-top: 17px;
+	list-style: none !important;
+}
+
+nav .navbar-nav li a{
+  color: #003566 !important;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.5s ease-out;
+  text-decoration: none;
+  }
+
+nav .navbar-nav li a:hover {
+ color: white !important; 
+ border-bottom-color: #003566;
+}
+
+h1.text-center{
+	padding-top: 200px;
+	font-family:'Dancing script';
+	color:#003566;
+	margin-left: 600px;
+}
+
+h1{
+	font-family:'shadows into light';
+	font-size: 50px;
+	color:  #99b3e6;
+}
+
+.big-banner{
+height: 500px;
+background-image: url(https://cdn.hipwallpaper.com/i/77/40/1MRIyb.jpg);
+background-size: cover !important;
+color:#003566;
+}
+
+
+.idk{
+	background-color: #99b3e6;
+	font-family: 'shadows into light';
+	width: 300px;
+	height: 250px;
+	transition-duration: 2000ms;
+	transition-property: background, transform;
+	margin-left: 50px;
+
+}
+
+.idk:hover{
+background-color: #d6e0f5;
+transform: rotate(360deg);
+}
+
+.middle{
+	background-color: #25488e;
+	font-family: 'shadows into light';
+	font-size: 30px;
+
+}
+
+p{
+	font-family: 'shadows into light';
+}
+
+footer{
+	background-color: #e6e6e6;
+	font-size: 13px;
+	font-weight: bold;
+}

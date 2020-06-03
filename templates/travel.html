@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block activeTravel %} active {% endblock %}
+{% block content %}
+    <br>
+    <br>
+
+<div class="container text-center">
+<h2 class="text-center">Travel tips</h2>
+</div>
+
+    <br>
+    <br>
+
+    <div class="top">
+    <div class="row align-items-center"
+    >
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='essentials.jpg')}}" alt="Morocco" class="img-fluid img-thumbnail center-block" width="350" height="auto" margin-left=30px>
+        </div>
+        <div class="col-md-6">
+           <p>Before exploring the unknown and visiting new places you have never seen, it is important to pack all the essentials
+           and be prepared for any situation possible. I cannot stress this enough how important it is to pack everything you think
+           you might need, from a light jacket to a first aid kit, do not neglect the importance of being prepared. In the end, it is always better
+           to be more safe than sorry. I have learned this the hard way. In this page, I will tell you what to pack, how to be prepared and how to
+           save your pockets as much as you can while having the time of your life!!</p>
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+    <h2 class="text-center"> What to pack before traveling?
+    </h2>
+
+    <div class="essentials">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{ url_for('static', filename='passport.jpg')}}" alt="passport" class="img-fluid img-thumbnail center-block" width="300" height="auto" margin-left=30px">
+        </div>
+        <div class="col-md-3">
+            <p>
+                First and foremost, do not forget your passport!! As silly as this may seem, it happens to the best of us, so you really
+                wanna make you have your passport before boarding the plane, and also at ALL TIMES. As for the essentials, do your
+                research. It is important to be aware of the weather in the country and be prepared accordingly. Also, pro-tip, even if the
+                country seems to warm at all times, bring a sweater or a light a jacket. It can get chilly at times, so definitely bring something to
+                cover yourself up. Bring a few pair of undergarments and socks so you can change at anytime.
+            </p>
+            <br>
+                <p>
+                Another pro-tip is to plan your
+                outfits ahead. Think of what you will be wearing everyday for the duration of your trip, and it doesn't hurt to repeat some outfits.
+                I also want to bring your attention to running shoes! They are super important because you never know when you will be needing them.
+                You might be having an excursion to the mountains or walking through the great forest. You definitely don't want to be wearing
+                sandals. This should be all for your luggage. I also recommend people to bring a travel bag with them that they can carry anywhere. It
+                is very useful and you can get have it on you at all times. You should keep your sanitary stuff in it and items from your first aid kit.
+                Lastly, don't forget your camera! You would want to take good quality pictures of the scenery. This it it! Now, you are all ready to board
+                the plane!
+                </p>
+
+            </div>
+                 <div class="col-md-3">
+            <img src="{{ url_for('static', filename='aid.jpg')}}" alt="first aid kit" class="img-fluid img-thumbnail center-block" width="300" height="auto" margin-left=30px">
+        </div>
+
+         <div class="col-md-3">
+            <img src="{{ url_for('static', filename='shoes.jpg')}}" alt="running shoes" class="img-fluid img-thumbnail center-block" width="200" height="auto" margin-left=30px">
+        </div>
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+    <h2 class="text-center">
+    Tips to save your $
+    </h2>
+
+    <div class="row">
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='airbnb.jpg')}}" alt="airbnb" class="img-fluid img-thumbnail center-block" width="250" height="auto" margin-left=30px">
+    </div>
+    <div class="col-md-4">
+        <p>
+            Who doesn't want to save their money? Traveling can be a little too expensive. With spending here and there on food, activities,
+            accommodations, one can have too many debts. But fear not! With these tips, you can save a lot and not miss out on anything. My first financial
+            advice would be to search up flight tickets in advance. There are tons of websites such as cheapflights.com that suggest tickets for not much.
+            It is just a matter of good searching skills and being a couple weeks in advance. If you can, definitely plan the trip months advance. A pro tip is
+            to not books when its the holidays. That's when most people decide to travel and the tickets get more expensive.
+            </p>
+            <br>
+        <p>
+            Another way to save money is by booking airbnbs with your friends instead of hotels. They can be way cheaper if you look for a good one
+            and the price can be split among all friends which  is even more convenient. For the Morocco trip, the cost was about 30$ per person for a night, which
+            is definitely a steal.
+        </p>
+            <br>
+        <p>
+            My last tip to save your pockets is by commuting with cheaper transportation like the subway, if possible. This is a huge one because not everyone
+            knows about this and they usually take ubers or taxis to get from one place to another when they can travel for way cheaper. That's we did for Japan.
+            They also had bicycle stations that you rent for a couple of bucks for the day, which is even more fun. You get the view and the excitement from riding
+            a bike on a different country. If you ask me, it's a bonus.
+        </p>
+    </div>
+
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='subway.jpg')}}" alt="airbnb" class="img-fluid img-thumbnail center-block" width="300" height="auto" margin-left=30px">
+    </div>
+    </div>
+
+    <br>
+    <br>
+
+    <h2 class="text-center">
+      Be safe!!!
+    </h2>
+
+    <br>
+    <br>
+
+    <div class="row">
+
+    <div class="col-md-3">
+        <img src="{{ url_for('static', filename='souvenirs.jpg')}}" alt="souvenirs" class="img-fluid img-thumbnail center-block" width="350" height="auto" margin-left=30px">
+    </div>
+
+     <div class="col-md-3">
+        <img src="{{ url_for('static', filename='world2.png')}}" alt="world" class="img-fluid img-thumbnail center-block" width="250" height="auto" margin-left=30px">
+    </div>
+
+    <div class="col-md-3">
+        <p>
+            My last advice would be to be careful and prudent. You need that the food you are eating is actually safe and won't
+            give you a tummy ache. This can be very annoying and in some extreme cases, painful as well. Especially when eating street food, it
+            is important you ensure the safety of the food you are putting in system. Many people end up spending their journey on bed, trying to
+            recover from food sickness. Another thing is to be careful when traveling alone. It can be dangerous, especially when you are a tourist. Some
+            can scam you with a lot of things or you can get lost in the middle of nowhere. Also , get yourself a cellphone or some form of communication devices
+            as they come really in handy. You don't need to pay expensive plans either. Just a few minutes of phone calls should more than enough.
+            This is why it is important to be safe and always on the lookout for danger signs. I would say it is more safe to visit crowded areas
+            rather than places that seem abandoned. Carry a map with you whenever you can. It can come really handy at times you would expect
+            the least. And most importantly, do not hesitate to ask for help. The people there are usually very welcoming with open arms
+            and are more than happy to help you.
+        </p>
+    </div>
+    </div>
+{% endblock %}

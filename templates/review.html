@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <br>
+    <br>
+
+
+    <br>
+
+    <div class="content-section">
+    {% for message in get_flashed_messages() %}
+    {{ message }}<br/>
+{% endfor %}
+
+    <h1> Review </h1>
+        <form method="POST" action="/review">
+            {{ form.hidden_tag(               ) }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"></legend>
+                {{ form.csrf_token }}
+                {{ form.username.label }}: {{ form.username }}<br/><br>
+                {{ form.select.label }}: {{ form.select }}<br/><br>
+                {{ form.check.label }}: {{ form.check }}
+                {{ form.radio.label }}: {{ form.radio }}<br/>
+                {{ form.comment.label }}:{{ form.comment }}<br/><br>
+                {{ form.Submit() }}
+            </fieldset>
+        </form>
+    </div>
+{% endblock %}
