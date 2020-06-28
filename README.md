@@ -10,4 +10,7 @@ Here is a preview of the website:
 
 <img width="1110" alt="2020-06-28 (1)" src="https://user-images.githubusercontent.com/60407634/85959736-22392b80-b96c-11ea-8a6a-7367c22cb0a3.png">
 
+<img width="1105" alt="2020-06-28 (2)" src="https://user-images.githubusercontent.com/60407634/85959803-8bb93a00-b96c-11ea-8129-9914eb79ad9d.png">
+
+
 
